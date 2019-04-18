@@ -20,10 +20,10 @@ DevOps 가 가능하도록 서버를 구축하고자 Docker, jenkins, Git, slack
 5) EC2에 Docker 설치
 ```
 >> 19.04.18
-
+>> [깃 명령어 정리](https://github.com/ui-jeong/git-commands.git)
 ```
-1) [깃 명령어 정리](https://github.com/ui-jeong/git-commands.git) / 한번 정독 바람..(내 소중한 커밋,,)
-2) ionic 설치 및 환경설정
+1) 깃 명령어 정리 : 한번 정독 바람..(내 소중한 커밋,,)
+2) ionic 설치 및 환경설정, 프로젝트 생성
 ```
 + ### UI
 > by 예진
