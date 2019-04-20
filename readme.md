@@ -1,4 +1,4 @@
-### jupyter notebook 으로 서버접속하기
+# jupyter notebook 으로 서버접속하기
 - `jupyter notebook` 설치하기
 ```
 sudo apt-get update
