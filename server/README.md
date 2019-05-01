@@ -15,3 +15,12 @@ docker login
 docker pull uiui97/osbprjt:tagname
 ionic4 build
 </pre>
+
+
+# RDS MariaDB-phpmyadmin
+
+### Run
+<pre>
+# if server is terminated, Enter command 'osbprjtDB'
+osbprjtDB 
+</pre>
