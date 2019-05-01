@@ -12,7 +12,7 @@ cd osbPATH
 <pre>
 # Login For Private Docker Repository
 docker login
-docker pull uiui97/osbprjt:tagname
+docker pull uiui97/osbprjt
 ionic4 build
 </pre>
 
