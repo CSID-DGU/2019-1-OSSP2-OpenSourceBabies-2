@@ -43,7 +43,11 @@
     "zone.js": "0.8.29"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@ionic/app-scripts": "^3.2.3",
+=======
+    "@ionic/app-scripts": "^3.2.1",
+>>>>>>> upstream/master
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
