@@ -11,7 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { CameraPage } from '../pages/camera/camera';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { FirstPage } from '../pages/first/first';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    CameraPage
+    CameraPage,
+    FirstPage
   ],
   imports: [
     LoginPageModule,
@@ -34,7 +35,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    CameraPage
+    CameraPage,
+    FirstPage
   ],
   providers: [
     StatusBar,

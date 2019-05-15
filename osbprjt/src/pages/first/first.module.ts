@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { FirstPage } from './first';
 
+
 @NgModule({
   declarations: [
     FirstPage,
@@ -10,4 +11,6 @@ import { FirstPage } from './first';
     IonicPageModule.forChild(FirstPage),
   ],
 })
-export class FirstPageModule {}
+export class FirstPageModule {
+
+}
