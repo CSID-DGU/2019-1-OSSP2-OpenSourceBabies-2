@@ -6,10 +6,17 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>first</ion-title>
+    <ion-title><ion-icon name="bookmarks"></ion-icon> DONGGUK UNIV. LIBRARY</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  
+  {{this.navParams.get('msg')}}
 
+  
+  <button ion-button block color="dark" (click)="openCamera()">
+    ar service <ion-icon name="camera"></ion-icon></button> 
+
+    
 </ion-content>

@@ -1,17 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title><ion-icon name="home"></ion-icon> HOME</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  
+    <p><ion-icon name="book"></ion-icon> 도서 찾기 arServie에 오신것을 환영합니다</p>
+    <p><ion-icon name="book"></ion-icon> 검색할 도서명을 입력해주세요</p>
+  <ion-list>
+    <ion-item>
+      <ion-label ><ion-icon name="search"></ion-icon> search  </ion-label>
+      <ion-input [(ngModel)]="newItem" type="text" (keyup.enter)="addItem()"></ion-input>
+      
+    </ion-item>
+  </ion-list>
+  
+  <hr>
+  
     
-    <div #frame style="width:100%;height:100%;overflow:scroll !important;-webkit-overflow-scrolling:touch !important">
-        <iframe src="https://lib.dongguk.edu/" class="iframe" scrolling="yes" width="100%" height="100%"></iframe>
-      </div>
-      <p></p>
-      <button ion-button block color="dark" (click)="openCamera()">
-         ar service <ion-icon name="star"></ion-icon></button>
 <p></p>
 
 </ion-content>
