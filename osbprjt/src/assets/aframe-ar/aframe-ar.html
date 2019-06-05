@@ -1,0 +1,20 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene>
+        <a-entity camera look-controls>
+            <a-entity geometry="primitive: plane; height: 0.5; width: 1" position="0 0 -1" material="opacity: 0;" text="value:2nd Floor!; color:red; align: center; width: 5; opacity:1">
+                <a-animation attribute="text.opacity"
+                to="0"
+                from="1"
+                dur="700"
+                repeat="indefinite"
+                direction="alternate">
+                </a-animation>           
+          </a-entity>
+          </a-entity>
+    </a-scene>
+  </body>
+</html>
