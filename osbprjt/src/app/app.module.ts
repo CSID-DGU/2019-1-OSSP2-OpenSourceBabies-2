@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LoginPageModule } from '../pages/login/login.module';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -21,12 +23,14 @@ import { FirstPage } from '../pages/first/first';
     HomePage,
     TabsPage,
     CameraPage,
+   // InAppBrowser,
     FirstPage
   ],
   imports: [
     LoginPageModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    //InAppBrowser
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,11 +40,13 @@ import { FirstPage } from '../pages/first/first';
     HomePage,
     TabsPage,
     CameraPage,
+    //InAppBrowser,
     FirstPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
