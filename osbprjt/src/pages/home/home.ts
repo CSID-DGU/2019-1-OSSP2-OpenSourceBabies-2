@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Platform,AlertController } from 'ionic-angular';
 import { AnonymousSubject } from 'rxjs';
 import { FirstPage } from '../first/first';
-import {HTTP} from '@ionic-native/http';
+import {Http, Headers,RequestOptions} from '@angular/http';
 import { fromPromise } from 'rxjs/observable/fromPromise';
 @Component({
   selector: 'page-home',
@@ -14,12 +14,23 @@ export class HomePage  {
 
   newItem:string; //입력값을 저장할 변수
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public http: Http) {
   }
  
   addItem():void{
-    this.navCtrl.push(FirstPage,{msg:this.newItem});
+    let headers=new Headers();
+    headers.append("Content-Type",'application/json');
 
+    let body={
+      message:this.newItem
+    };
+
+    this.http.post('http://localhost:8080/test',JSON.stringify(body),{headers:headers})
+    .subscribe((data)=>{
+      console.log(data);
+    })
+ 
+ //   this.navCtrl.push(FirstPage,{msg:this.newItem});
   }
 
 }

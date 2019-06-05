@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the CameraPage page.
@@ -14,12 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'camera.html',
 })
 export class CameraPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  floor:string;//층
+  constructor(private storage:Storage,public navCtrl: NavController, public navParams: NavParams) {
+    storage.set('floor', '2nd floor!');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CameraPage');
   }
-
+ 
 }

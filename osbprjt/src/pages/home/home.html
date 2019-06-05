@@ -4,6 +4,7 @@
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
   
     <p><ion-icon name="book"></ion-icon> 도서 찾기 arServie에 오신것을 환영합니다</p>
@@ -11,7 +12,7 @@
   <ion-list>
     <ion-item>
       <ion-label ><ion-icon name="search"></ion-icon> search  </ion-label>
-      <ion-input [(ngModel)]="newItem" type="text" (keyup.enter)="addItem()"></ion-input>
+      <ion-input id="input" [(ngModel)]="newItem" type="text" (keyup.enter)="addItem()"></ion-input>
       
     </ion-item>
   </ion-list>
