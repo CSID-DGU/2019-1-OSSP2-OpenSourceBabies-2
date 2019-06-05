@@ -25,7 +25,7 @@ export class HomePage  {
       message:this.newItem
     };
 
-    this.http.post('http://localhost:8080/test',JSON.stringify(body),{headers:headers})
+    this.http.post('http://localhost:9876/test',JSON.stringify(body),{headers:headers})
     .subscribe((data)=>{
       console.log(data);
     })

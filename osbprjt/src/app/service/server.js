@@ -52,6 +52,6 @@ app.post('/test',function(req,res){
     res.json(res_dict);
 });
 
-app.listen(8080, function(){
+app.listen(9876, function(){
     console.log('Server is running...');
 });
