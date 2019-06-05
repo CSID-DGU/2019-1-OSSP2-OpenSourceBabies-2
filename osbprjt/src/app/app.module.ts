@@ -6,6 +6,7 @@ import { LoginPageModule } from '../pages/login/login.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
@@ -26,11 +27,13 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
     CameraPage,
     FirstPage,
     AframeArPage
+
   ],
   imports: [
     LoginPageModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
+
     IonicStorageModule.forRoot(),
     HttpModule,
     HttpClientModule
@@ -52,6 +55,8 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpModule,
     HttpClientModule
+    InAppBrowser,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
