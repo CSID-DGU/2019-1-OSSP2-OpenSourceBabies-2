@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CameraPage } from '../camera/camera';
-
 /**
  * Generated class for the FirstPage page.
  *
@@ -15,10 +14,7 @@ import { CameraPage } from '../camera/camera';
   templateUrl: 'first.html',
 })
 export class FirstPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log(this.navParams.get('msg'));
@@ -27,4 +23,8 @@ export class FirstPage {
   openCamera(): void{
     this.navCtrl.push(CameraPage);
   }
+
+
 }
+
+

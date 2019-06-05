@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LoginPageModule } from '../pages/login/login.module';
+import { IonicStorageModule } from '@ionic/storage';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-
-
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
@@ -32,7 +33,10 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
     LoginPageModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    //InAppBrowser
+
+    IonicStorageModule.forRoot(),
+    HttpModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,6 +52,9 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
   providers: [
     StatusBar,
     SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpModule,
+    HttpClientModule
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
