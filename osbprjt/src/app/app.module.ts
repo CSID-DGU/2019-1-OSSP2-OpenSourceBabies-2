@@ -54,7 +54,7 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
