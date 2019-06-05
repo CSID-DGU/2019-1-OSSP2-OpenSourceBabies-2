@@ -24,3 +24,12 @@ ionic4 build
 # if server is terminated, Enter command 'osbprjtDB'
 osbprjtDB 
 </pre>
+
+
+# node API server
+
+### Run
+<pre>
+# if process is terminated, Enter command this
+node server.js
+</pre>
