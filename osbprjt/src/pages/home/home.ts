@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Platform,AlertController } from 'ionic-angular';
-import { AnonymousSubject } from 'rxjs';
+//import { Platform,AlertController } from 'ionic-angular';
+//import { AnonymousSubject } from 'rxjs';
 import { FirstPage } from '../first/first';
 import {Http, Headers,RequestOptions} from '@angular/http';
-import { fromPromise } from 'rxjs/observable/fromPromise';
+//import { fromPromise } from 'rxjs/observable/fromPromise';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-import { BrowserDomAdapter } from '@angular/platform-browser/src/browser/browser_adapter';
+//import { BrowserDomAdapter } from '@angular/platform-browser/src/browser/browser_adapter';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+//import { BrowserModule } from '@angular/platform-browser';
 
 
 @Component({
@@ -46,12 +46,12 @@ export class HomePage  {
       message:this.newItem
     };
 
-    this.http.post('http://localhost:8080/test',JSON.stringify(body),{headers:headers})
+    this.http.post('http://15.164.97.30:3000/test',JSON.stringify(body),{headers:headers})
     .subscribe((data)=>{
       console.log(data);
     })
  
- //   this.navCtrl.push(FirstPage,{msg:this.newItem});
+    this.navCtrl.push(FirstPage,{msg:this.newItem});
   }
 
   
