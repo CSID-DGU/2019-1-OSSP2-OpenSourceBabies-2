@@ -7,10 +7,11 @@ var bodyParser=require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(cors());
-app.post('/test',function(req,res){
+
+app.post('/api/scraping',function(req,res){
     var client = require('cheerio-httpcli');
     var keyword = req.body.message;
-    var page = ['0', '1', '2', '3', '4', '5'] //ë„˜ì–´ê°ˆ í˜ì´ì§€ ì§€ì •
+    var page = ['0', '1', '2', '3', '4', '5'] //³Ñ¾î°¥ ÆäÀÌÁö ÁöÁ¤
     var url;
     var param = {};
     var res_dict={};
@@ -28,14 +29,14 @@ app.post('/test',function(req,res){
           return;
         }
   
-        var img_src_List = $("div.result").find(".book").find("a").find("img"); //ì´ë¯¸ì§€ íŒŒì¼ src
-        var aList = $("div.result").find(".title").find("a"); //text: ì±…ì´ë¦„  href: ì´ë¯¸ì§€ í´ë¦­ì‹œ ë„˜ì–´ê°€ëŠ” í˜ì´ì§€
+        var img_src_List = $("div.result").find(".book").find("a").find("img"); //ÀÌ¹ÌÁö ÆÄÀÏ src
+        var aList = $("div.result").find(".title").find("a"); //text: Ã¥ÀÌ¸§  href: ÀÌ¹ÌÁö Å¬¸¯½Ã ³Ñ¾î°¡´Â ÆäÀÌÁö
         var h;
         for(let i=0; i < aList.length; i++){
             rank++;
-            img=$(img_src_List[i]).attr("src");//ì´ë¯¸ì§€ íŒŒì¼ src
-            title=$(aList[i]).text();//ì±…ì´ë¦„
-            link = 'https://lib.dongguk.edu/'+$(aList[i]).attr("href"); //ì´ë¯¸ì§€ í´ë¦­ì‹œ ë„˜ì–´ê°€ëŠ” í˜ì´ì§€
+            img=$(img_src_List[i]).attr("src");//ÀÌ¹ÌÁö ÆÄÀÏ src
+            title=$(aList[i]).text();//Ã¥ÀÌ¸§
+            link = 'https://lib.dongguk.edu/'+$(aList[i]).attr("href"); //ÀÌ¹ÌÁö Å¬¸¯½Ã ³Ñ¾î°¡´Â ÆäÀÌÁö
             temp_dict[rank]={'img':img, 'title':title, 'link':link};
             
             res_dict[String(rank)]=temp_dict[rank];
