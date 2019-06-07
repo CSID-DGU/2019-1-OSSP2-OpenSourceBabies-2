@@ -23,21 +23,7 @@ export class HomePage  {
   constructor(private iab: InAppBrowser, public navCtrl: NavController,public http: Http) {
   }
  
-  openUrl1()
-  {
-    
-   this.iab.create('http://www.dongguk.edu/mbs/kr/index.jsp','_blank','locatiton=yes');
-  }    
-  openUrl2()
-  {
-    this.iab.create(' https://eclass.dongguk.edu/index.jsp','_blank','locatiton=yes');
-   
-  }
-  openUrl3()
-  {
-    this.iab.create('https://engineer.dongguk.edu/','_blank','locatiton=yes');
-  }
-
+  
   addItem():void{
     let headers=new Headers();
     headers.append("Content-Type",'application/json');

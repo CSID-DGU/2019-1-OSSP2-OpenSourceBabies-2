@@ -16,6 +16,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirstPage } from '../pages/first/first';
 import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
+//import { HeaderColor } from '@ionic-native/header-color/ngx';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
   providers: [
     StatusBar,
     SplashScreen,
+   // HeaderColor,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpModule,
     HttpClientModule,
