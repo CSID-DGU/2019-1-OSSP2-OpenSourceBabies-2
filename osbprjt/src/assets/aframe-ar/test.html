@@ -1,0 +1,19 @@
+<!doctype HTML>
+<html>
+<meta charset="utf-8">
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://cdn.rawgit.scom/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js">
+    </script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
+<script src="aframe-ar.js"></script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="material" src="union.mtl"></a-asset-item>
+            <a-asset-item id="object" src="union.obj"></a-asset-item>
+          </a-assets>
+        <a-obj-model src="#object" mtl="#material" align="center" position="0 -3 -12" rotation="0 -90 0" shadow></a-obj-model>
+    </a-scene>ss
+  </body>
+</html>
