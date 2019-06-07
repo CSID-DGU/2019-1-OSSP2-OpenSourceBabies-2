@@ -32,7 +32,7 @@ export class HomePage  {
       message:this.newItem
     };
 
-    this.http.post('http://15.164.97.30:3000/test',JSON.stringify(body),{headers:headers})
+    this.http.post('http://15.164.97.30:3000/api/scraping',JSON.stringify(body),{headers:headers})
     .subscribe((data)=>{
       console.log(data);
     })
