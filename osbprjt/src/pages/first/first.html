@@ -9,13 +9,36 @@
         <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
     <ion-title><ion-icon name="bookmarks"></ion-icon> DONGGUK UNIV. LIBRARY</ion-title>
   </ion-navbar>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+
 </ion-header>
 
 <ion-content padding>
+ <ion-icon name="search">검색결과</ion-icon><br>
+  총 검색된 책의 권수는 {{ totalBookNo }}권입니다.<br><br><br>
+  <div class="screen" *ngFor="let q of eachBook$ | async">
+<ion-row>
+  <ion-col col-10>
+      {{q.id}}.
+  </ion-col>
+  <ion-col col-4>
+    <button (click)="nextPage()">
+      <img   width="100" height="130" src="{{q.img}}" />
+    </button>
+  </ion-col>
+  <ion-col>
+      도서명 : {{q.title}}<br>서가번호 :{{ q.bookNumber }} <br><br>
+  </ion-col>
+   
 
     
-  <button ion-button block color="dark" (click)="openCamera()">
-    ar service <ion-icon name="camera"></ion-icon></button> 
+    
+
+  </ion-row>
+  <br>
+  </div>
+
 
     
 </ion-content>

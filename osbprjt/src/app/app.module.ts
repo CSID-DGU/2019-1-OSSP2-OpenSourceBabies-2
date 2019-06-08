@@ -16,7 +16,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirstPage } from '../pages/first/first';
 import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
-//import { HeaderColor } from '@ionic-native/header-color/ngx';
+import { LogicProvider } from '../providers/logic/logic';
+import { SecondPage } from '../pages/second/second';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
     TabsPage,
     CameraPage,
     FirstPage,
+    SecondPage,
     AframeArPage
 
   ],
@@ -48,6 +50,7 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
     TabsPage,
     CameraPage,
     FirstPage,
+    SecondPage,
     AframeArPage
   ],
   providers: [
@@ -58,7 +61,8 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
     HttpModule,
     HttpClientModule,
     InAppBrowser,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    //{provide: ErrorHandler, useClass: IonicErrorHandler},
+    LogicProvider
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
