@@ -7,7 +7,6 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-//import { HeaderColor } from '@ionic-native/header-color/ngx';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,6 +24,18 @@ export class MyApp {
 
       
     });
+  }
+  openUrl1()
+  {
+    window.open('http://www.dongguk.edu/mbs/kr/index.jsp');
+  }
+  openUrl2()
+  {
+    window.open('https://eclass.dongguk.edu/index.jsp');
+  }
+  openUrl3()
+  {
+    window.open('https://engineer.dongguk.edu/');
   }
 }
 

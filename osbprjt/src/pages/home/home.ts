@@ -18,10 +18,18 @@ import { NgModule } from '@angular/core';
 export class HomePage  {
   
 
+ 
+
+  constructor(private iab: InAppBrowser, public navCtrl: NavController,public http: Http
+    ) {
+  }
+  
+
+
+  
   newItem:string; //입력값을 저장할 변수
 
-  constructor(private iab: InAppBrowser, public navCtrl: NavController,public http: Http) {
-  }
+ 
  
   
   addItem():void{
