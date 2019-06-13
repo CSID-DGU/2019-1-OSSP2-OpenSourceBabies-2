@@ -58,7 +58,8 @@ ionViewWillEnter() {
     headers.append("Content-Type",'application/json');
 
     let body={
-      message:'001' //청구번호
+      number:'001', //청구번호
+      floor:'3'
     };
 
     this.http.post('http://15.164.97.30:3001/api/osbprjt',JSON.stringify(body),{headers:headers})

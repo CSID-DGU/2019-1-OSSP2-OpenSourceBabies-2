@@ -7,6 +7,7 @@ import { LogicProvider } from '../../providers/logic/logic';
 import { Observable } from "rxjs";
 import { IData } from '../../interfaces/data.interface';
 import { SecondPage } from '../second/second';
+
 /**
  * Generated class for the FirstPage page.
  *
@@ -28,9 +29,18 @@ export class FirstPage {
 
   eachBook$: Observable<IData[]>;
   totalBookNo: number;
-  
+  query: string;
+  url:string;
+  apiKey:string;
+  type:string;
+  dataAPI:Observable<any>;
   constructor(public navCtrl: NavController,public http: Http
     ,public navParams: NavParams,public _logic: LogicProvider) {
+     this.query=navParams.get('msg');
+      this.dataAPI=this.getDataDetail();
+      
+      this.dataAPI.subscribe(res => console.log(res));
+      
   }
   
 
@@ -45,7 +55,7 @@ ionViewWillEnter() {
   //constructor(public navCtrl: NavController, public navParams: NavParams, public http:Http) {}
 
   ionViewDidLoad() {
-    console.log(this.navParams.get('msg'));
+    this.query=this.navParams.get('msg');
   
   }
   openCamera(): void{
@@ -60,12 +70,19 @@ ionViewWillEnter() {
     .subscribe((data)=>{
       console.log(data);
     })
+
     this.navCtrl.push(CameraPage);
   }
+  getDataDetail():Observable<any>{
+    this.url='http://book.interpark.com/api/search.api'
+    this.apiKey ='B25A5112DBB7B1A1397581B384368BFFBDD72DF40F532624B6A5CEED31CF017D';
+    this.type='json';
+    var stringmay=`${this.url}?key=${this.apiKey}&&query=${this.query}&output=${this.type}`;
+    console.log(stringmay);
+    return this.http.get(`${this.url}?key=${this.apiKey}&&query=${this.query}&output=${this.type}`);
+    }
 
-
-  nextPage():void
-  {
+  nextPage():void{
       this.navCtrl.push(SecondPage);
   }
 
