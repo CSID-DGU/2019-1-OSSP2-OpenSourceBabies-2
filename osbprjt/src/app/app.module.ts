@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LoginPageModule } from '../pages/login/login.module';
 import { IonicStorageModule } from '@ionic/storage';
@@ -18,7 +19,7 @@ import { FirstPage } from '../pages/first/first';
 import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
 import { LogicProvider } from '../providers/logic/logic';
 import { SecondPage } from '../pages/second/second';
-
+import {SeatPage} from '../pages/seat/seat';
 @NgModule({
   declarations: [
     MyApp,
@@ -29,8 +30,8 @@ import { SecondPage } from '../pages/second/second';
     CameraPage,
     FirstPage,
     SecondPage,
-    AframeArPage
-
+    AframeArPage,
+    SeatPage
   ],
   imports: [
     LoginPageModule,
@@ -51,7 +52,8 @@ import { SecondPage } from '../pages/second/second';
     CameraPage,
     FirstPage,
     SecondPage,
-    AframeArPage
+    AframeArPage,
+    SeatPage
   ],
   providers: [
     StatusBar,
