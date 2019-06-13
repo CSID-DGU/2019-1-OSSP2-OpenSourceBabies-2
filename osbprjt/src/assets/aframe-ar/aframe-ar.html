@@ -1,37 +1,37 @@
 <!doctype HTML>
 <html>
-<meta charset="utf-8">
+<meta charset="utf-8" name="viweport" content="width=device-width, user-scalable=no,minimum-scale=1.0, maximum-scale=1.0">
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js">
     </script>
+    <script src="apiRTC.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
-
-<script src="aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
-    <a-scene>
+    <div id="frameSize">
+    <a-scene embedded arjs>
         <a-assets>
             <a-asset-item id="material" src="union.mtl"></a-asset-item>
             <a-asset-item id="object" src="union.obj"></a-asset-item>
             <a-obj-model id="book" src="#object" mtl="#material" align="center" position="0 -3 -12" rotation="0 -90 0" shadow></a-obj-model>
             <a-plane id="ground" color="#ff9988" rotation="270 0 0" height="7" width="7" position="0 -2 -10"></a-plane>
-            <img id="map" src="../imgs/logo.png">
-          </a-assets>
-        <a-entity class="camera" camera look-controls cursor="rayOrigin: mouse"></a-entity>
-            <a-entity id="splash">
-            <a-text value="2nd Floor!" color="red" align="center" width="5" opacity="1"
-            geometry="primitive: plane; height: 0.5; width: 1" position="0 0 -1" material="opacity: 0;" 
-            >
-                <a-animation 
-                attribute="text.opacity"
-                to="0"
-                from="1"
-                dur="700"
-                repeat="indefinite"
-                direction="alternate">
-                </a-animation>           
+            <a-text id="text1" onclick="touchEvent1()" value="2nd Floor!" color="red" align="center" width="5" opacity="1"
+            geometry="primitive: plane; height: 0.5; width: 1" position="0 0 -1" material="opacity: 0;" >
+                <a-animation attribute="text.opacity" to="0" from="1" dur="700" repeat="indefinite" direction="alternate"></a-animation>           
             </a-text>
-          </a-entity>
+            <a-text id="text2" onclick="touchEvent2()" value="if you arrived, touch!" color="red" align="center" width="2" opacity="1"
+            geometry="primitive: plane; height: 0.01; width: 0.01" position="0 0 -1" material="opacity: 0;" >
+                <a-animation attribute="text.opacity" to="0" from="1" dur="700" repeat="indefinite" direction="alternate"></a-animation>           
+            </a-text>
+            <img id="map" src="../imgs/logo.png">
+            <a-image src="#map" position="0 0 -1" geometry="primitive:plane; height:0.5; width:1;"></a-image>
+          </a-assets>
+          
+          <a-entity class="camera" camera look-controls></a-entity>
+          <a-entity id="splash"></a-entity>          
           <a-entity id="bookEl"></a-entity>
+      
     </a-scene>
+  </div>
   </body>
 </html>

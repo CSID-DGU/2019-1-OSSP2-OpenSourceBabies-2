@@ -16,6 +16,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirstPage } from '../pages/first/first';
 import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+
 //import { HeaderColor } from '@ionic-native/header-color/ngx';
 
 @NgModule({
@@ -34,7 +36,6 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
     LoginPageModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
-
     IonicStorageModule.forRoot(),
     HttpModule,
     HttpClientModule
@@ -58,6 +59,7 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
     HttpModule,
     HttpClientModule,
     InAppBrowser,
+    AndroidPermissions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
