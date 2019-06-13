@@ -18,25 +18,32 @@ import { NgModule } from '@angular/core';
 export class HomePage  {
   
 
-  newItem:string; //입력값을 저장할 변수
+ 
 
-  constructor(private iab: InAppBrowser, public navCtrl: NavController,public http: Http) {
+  constructor(private iab: InAppBrowser, public navCtrl: NavController,public http: Http
+    ) {
   }
  
+  newItem:string; //입력값을 저장할 변수
   
   addItem():void{
     let headers=new Headers();
     headers.append("Content-Type",'application/json');
 
     let body={
-      message:this.newItem
+      message:this.newItem,
+      page:'1'
     };
 
     this.http.post('http://15.164.97.30:3000/api/scraping',JSON.stringify(body),{headers:headers})
-    .subscribe((data)=>{
-      console.log(data);
+    .toPromise().then(res=>{
+      console.log("아이오닉 검색 시"+res.json());
     })
- 
+    this.http.post('http://15.164.97.30:3002/api/scraping',JSON.stringify(body),{headers:headers})
+    .subscribe((data)=>{
+      console.log("server2:"+data.json());
+    })
+
     this.navCtrl.push(FirstPage,{msg:this.newItem});
   }
 

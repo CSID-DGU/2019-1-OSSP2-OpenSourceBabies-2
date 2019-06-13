@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LoginPageModule } from '../pages/login/login.module';
 import { IonicStorageModule } from '@ionic/storage';
@@ -19,7 +20,9 @@ import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
 //import { HeaderColor } from '@ionic-native/header-color/ngx';
-
+import { LogicProvider } from '../providers/logic/logic';
+import { SecondPage } from '../pages/second/second';
+import {SeatPage} from '../pages/seat/seat';
 @NgModule({
   declarations: [
     MyApp,
@@ -29,8 +32,9 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
     TabsPage,
     CameraPage,
     FirstPage,
-    AframeArPage
-
+    SecondPage,
+    AframeArPage,
+    SeatPage
   ],
   imports: [
     LoginPageModule,
@@ -49,7 +53,9 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
     TabsPage,
     CameraPage,
     FirstPage,
-    AframeArPage
+    SecondPage,
+    AframeArPage,
+    SeatPage
   ],
   providers: [
     StatusBar,
@@ -60,7 +66,8 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
     HttpClientModule,
     InAppBrowser,
     AndroidPermissions,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    //{provide: ErrorHandler, useClass: IonicErrorHandler},
+    LogicProvider
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

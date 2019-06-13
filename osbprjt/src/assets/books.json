@@ -1,0 +1,30 @@
+﻿[
+          {
+	"id":1,
+	"title": "반갑다 lonic : lonic을 이용한 하이브리드 앱 만들기",
+	"img": "http://bimage.interpark.com/goods_image/8/4/0/8/280418408s.jpg",
+	"bookNumber":"001이",
+	"link": "https://lib.dongguk.edu//search/detail/CATTOT000001006176?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%95%84%EC%9D%B4%EC%98%A4%EB%8B%89_A_st=KWRD_A_si=TOTAL_A_pn=1"
+       },
+       {
+	"id":2,
+	"title": "(IONIQ 기반)기초 전기자동차 실습",
+	"img": "http://bimage.interpark.com/goods_image/6/5/1/1/288666511s.jpg",
+	"bookNumber":"002후",
+	"link": "https://lib.dongguk.edu//search/detail/CATTOT000001180395?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%95%84%EC%9D%B4%EC%98%A4%EB%8B%89_A_st=KWRD_A_si=TOTAL_A_pn=1"
+       },
+       {
+	"id":3,
+	"title": "아이오닉 2 블루프린트 : 아이오닉 2로 동적 모바일 앱 만들기",
+	"img": "http://bimage.interpark.com/goods_image/6/6/6/7/267606667s.jpg",
+	"bookNumber":"002황",
+	"link": "'https://lib.dongguk.edu//search/detail/CATTOT000000986514?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%95%84%EC%9D%B4%EC%98%A4%EB%8B%89_A_st=KWRD_A_si=TOTAL_A_pn=1"
+       },
+       {
+	"id":4,
+	"title": "친환경 자동차의 최전선 : 테슬라·프리우스·아이오닉 일렉트릭, 에코카의 미래 기술 보고서",
+	"img": "http://bimage.interpark.com/goods_image/7/2/9/4/269647294s.jpg",
+	"bookNumber":"005브",
+	"link": "https://lib.dongguk.edu//search/detail/CATTOT000000995611?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%95%84%EC%9D%B4%EC%98%A4%EB%8B%89_A_st=KWRD_A_si=TOTAL_A_pn=1"
+       }
+   ]
