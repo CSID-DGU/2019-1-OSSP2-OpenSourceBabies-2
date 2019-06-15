@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewChild, AfterViewInit } from '@angular/core';
-import { Platform } from '@ionic/angular';
-import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+//import { Platform } from '@ionic/angular';
+//import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 /**
  * Generated class for the CameraPage page.
  *
@@ -17,7 +17,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 })
 export class CameraPage implements AfterViewInit{
   floor:string;//층
-  constructor(public navCtrl: NavController, public navParams: NavParams,private platform: Platform, private androidPermissions: AndroidPermissions) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,/*private platform: Platform,private androidPermissions: AndroidPermissions*/) {
   /*
     if (this.platform.is('cordova')) {
       this.platform.ready().then(() => {
