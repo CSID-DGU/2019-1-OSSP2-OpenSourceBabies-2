@@ -15,8 +15,8 @@
 </ion-header>
 
 <ion-content padding>
- <ion-icon name="search">검색결과</ion-icon><br>
-  총 검색된 책의 권수는 {{ totalBookNo }}권입니다.<br><br><br>
+ <ion-icon name="search">검?�결�?/ion-icon><br>
+  �?검?�된 책의 권수??{{ totalBookNo }}권입?�다.<br><br><br>
   <div class="screen" *ngFor="let q of eachBook$ | async">
 <ion-row>
   <ion-col col-10>
@@ -28,12 +28,10 @@
     </button>
   </ion-col>
   <ion-col>
-      도서명 : {{q.title}}<br>서가번호 :{{ q.bookNumber }} <br><br>
+      ?�서�?: {{q.title}}<br>?��?번호 :{{ q.bookNumber }} <br><br>
   </ion-col>
    
 
-    
-    
 
   </ion-row>
   <br>

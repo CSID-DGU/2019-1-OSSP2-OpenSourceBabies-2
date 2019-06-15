@@ -5,9 +5,14 @@
     <ion-title>camera</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
-
-  <iframe src="/assets/aframe-ar/aframe-ar.html"></iframe>
+  <script>
+    if(window != top)
+    {
+    self.resizeTo(document.body.scrollWidth, document.body.scrollHeight + 10);
+    }
+    </script>
+  <iframe width="100%" height="100%" allow="microphone; camera"
+  allowfullscreen="yes" allowvr="yes" src="/assets/aframe-ar/aframe-ar.html" ></iframe>
 
 </ion-content>

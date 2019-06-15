@@ -1,50 +1,32 @@
 
 window.onload=function(){
+  var width=window.width
+  var height=window.height
+  var div=document.querySelector('#frameSize');
+  div.setAttribute('width',width);
+  div.setAttribute('height',height);
   var sceneEl=document.querySelector('#splash');
-  sceneEl.addEventListener('click', function (evt){
-      console.log('I was clicked at: ', evt.detail.intersection.point);
-      var text=document.querySelector('a-text');
-      text.parentNode.removeChild(text);
-      var mapEl=document.createElement('a-image')
-      var textEl=document.createElement('a-text')
-      var textaniEl=document.createElement('a-animation');
-      mapEl.setAttribute('src','#map');
-      mapEl.setAttribute('position','0 0 -1');
-      mapEl.setAttribute(
-        'geometry',{primitive: 'plane',
-         height: '0.5',
-          width: '1'}
-      )
-      textEl.setAttribute('value','if arrived, touch!');
-      textEl.setAttribute('color','red');
-      textEl.setAttribute('align','center');
-      textEl.setAttribute('width','2');
-      textEl.setAttribute('position','0 0 -1');
-      textEl.setAttribute(
-        'geometry',{primitive: 'plane',
-          width: '0.01',
-          height: '0.01'
-        }
-      )
-      textaniEl.setAttribute('attribute','text.opacity');
-      textaniEl.setAttribute('to','0');
-      textaniEl.setAttribute('from','1');
-      textaniEl.setAttribute('dur','700');
-      textaniEl.setAttribute('repeat','indefinite');
-      textaniEl.setAttribute('direction','alternate');
-      textEl.appendChild(textaniEl);
+  var text=document.querySelector('a-text');
+  sceneEl.appendChild(text);
 
-      sceneEl.appendChild(mapEl);
-      sceneEl.appendChild(textEl);
+}
+function touchEvent1(){
+  var text1=document.querySelector('#text1');
+  text1.parentNode.removeChild(text1);
 
-      sceneEl.addEventListener('click', function (evt){
-          console.log('I was clicked at: ', evt.detail.intersection.point);
-          sceneEl.parentElement.removeChild(sceneEl);
-          var cameraEl=document.querySelector('.camera');
-          cameraEl.parentElement.removeChild(cameraEl);
-          bookNav();
-      });
-  });
+  var text2=document.querySelector('#text2');
+  var mapEl=document.querySelector('a-image');
+  sceneEl.appendChild(mapEl);
+  sceneEl.appendChild(text2);
+}
+
+function touchEvent2(){
+  sceneEl.parentElement.removeChild(sceneEl);
+  var cameraEl=document.querySelector('.camera');
+  cameraEl.parentElement.removeChild(cameraEl);
+  bookNav();
+}
+
 function bookNav(){
   var bookEl=document.querySelector('#bookEl');
   var book=document.createElement('a-obj-model');
@@ -54,6 +36,9 @@ function bookNav(){
   book.setAttribute('align','center');
   book.setAttribute('rotation','0 -90 0');
   bookEl.appendChild(book);
+  bookEl.addEventListener('click',function(evt){
+    console.log('I was clicked at bookEl');
+  })
+
   }  
-}
   
