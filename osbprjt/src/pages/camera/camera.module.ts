@@ -5,7 +5,10 @@ import { CameraPage } from './camera';
 @Component({
   selector: 'app-ar-camera',
   templateUrl: './camera.html',
-})
+  styleUrls: ['./CameraPage.scss'],
+  encapsulation: ViewEncapsulation.None
+}) 
+
 @NgModule({
   declarations: [
   ],

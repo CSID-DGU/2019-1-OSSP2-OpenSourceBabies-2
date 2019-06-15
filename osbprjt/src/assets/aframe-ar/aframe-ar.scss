@@ -1,0 +1,16 @@
+page-aframe-ar {
+    @-webkit-keyframes flash {
+        0% { left: -100%; } 
+        50% { opacity: .1; } 
+        100% {  left: 0; }
+    }
+    @keyframes flash {
+        0% { left: -100%; } 
+        50% { opacity: .1; } 
+        100% {  left: 0; }
+    }
+    #2nd{
+        -webkit-animation: flash linear 1s infinite;
+        animation: flash linear 1s infinite; 
+    }
+}

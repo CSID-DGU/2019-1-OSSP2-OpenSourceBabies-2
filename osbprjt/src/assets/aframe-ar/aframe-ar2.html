@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>Hello, World! • A-Frame three.ar.js</title>
+    <meta name="description" content="Hello, World! • A-Frame three.ar.js">
+    <script src="https://cloud.apizee.com/libs/jquery-1.9.0.min.js"></script>
+    <script src="https://cloud.apizee.com/apiRTC/v4.1/apiRTC-latest.min.debug.js"></script>
+    <script>
+        function checkPermissionCallback(status, perm) {
+            var permissions = cordova.plugins.permissions;
+            if (!status.hasPermission) {
+                var errorCallback = function() {
+                    console.warn('permission is not turned on', perm);
+                };
+                permissions.requestPermission(
+                    perm,
+                    function(status) {
+                        if (!status.hasPermission) {
+                            errorCallback();
+                        }
+                    },
+                    errorCallback
+                );
+            }
+        }
+        var iosrtc = null;
+    document.addEventListener("deviceready", function() {
+      if ((typeof device !== "undefined") && device.platform == 'iOS'){
+        cordova.plugins.iosrtc.registerGlobals();
+        iosrtc = cordova.plugins.iosrtc;
+      }
+    }, false);
+    if (cordova.plugins !== null && typeof cordova.plugins.permissions !== 'undefined' && cordova.plugins.permissions) {
+            var permissions = cordova.plugins.permissions;
+            permissions.hasPermission(
+                permissions.CAMERA,
+                function(status) {
+                    checkPermissionCallback(status, permissions.CAMERA);
+                },
+                null
+            );
+            permissions.hasPermission(
+                permissions.RECORD_AUDIO,
+                function(status) {
+                    checkPermissionCallback(status, permissions.RECORD_AUDIO);
+                },
+                null
+            );
+            permissions.hasPermission(
+                permissions.READ_EXTERNAL_STORAGE,
+                function(status) {
+                    checkPermissionCallback(status, permissions.READ_EXTERNAL_STORAGE);
+                },
+                null
+            );
+            permissions.hasPermission(
+                permissions.ACCESS_NETWORK_STATE,
+                function(status) {
+                    checkPermissionCallback(status, permissions.ACCESS_NETWORK_STATE);
+                },
+                null
+            );
+        }    
+  </script>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/google-ar/three.ar.js/master/dist/three.ar.js"></script>
+    <script src="../dist/aframe-three-ar.js"></script>
+    <script src="https://3d.io/releases/3dio-js/1.0.x-beta/3dio.min.js"></script>
+  </head>
+  <body onclick="swapFurniture()">
+    <a-scene three-ar vr-mode-ui="enabled:false">
+      <!-- get more furniture here https://furniture.3d.io/#furnitureId=5b130c33-e3a8-4504-92e6-0b139fa96089 -->
+      <a-entity io3d-furniture="id:5b130c33-e3a8-4504-92e6-0b139fa96089" position="0 -1.3 -2"></a-entity>
+      <a-sphere radius="0.1" color="orange" position="0 1 -2"></a-sphere>
+    </a-scene>
+    <script>
+      let furnitureEl = document.querySelector('a-entity[io3d-furniture]')
+      let furniture = furnitureEl.getAttribute('io3d-furniture')
+      let alternatives
+      let counter = 0
+      // get alternatives for given furniture
+      io3d.homeStaging.replaceFurniture(furniture.id, {position: furnitureEl.getAttribute('position')})
+      .then(result => {
+        alternatives = result
+      })
+      function swapFurniture() {
+        if (alternatives.length === 0) return
+        // set new id
+        furnitureEl.setAttribute('io3d-furniture', {id: alternatives[counter].furniture.id})
+        // set new position to center it again based on the dinemsions
+        furnitureEl.setAttribute('position', AFRAME.utils.coordinates.stringify(alternatives[counter].position))
+        counter ++
+        if (counter >= alternatives.length) counter = 0
+      }
+    </script>
+
+
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+  <script src="build/vendor.js"></script>
+
+  <!-- The main bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+  </body>
+</html>
