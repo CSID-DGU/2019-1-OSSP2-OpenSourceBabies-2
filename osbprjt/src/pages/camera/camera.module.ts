@@ -8,14 +8,16 @@ import { CameraPage } from './camera';
   styleUrls: ['./CameraPage.scss'],
   encapsulation: ViewEncapsulation.None
 }) 
+
 @NgModule({
   declarations: [
-    CameraPage,
   ],
   imports: [
     IonicPageModule.forChild(CameraPage),
   ],
 })
-export class ArCameraPage{
+
+export class CameraPageModule {
+
 }
 

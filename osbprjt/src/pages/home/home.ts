@@ -9,7 +9,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 //import { BrowserDomAdapter } from '@angular/platform-browser/src/browser/browser_adapter';
 import { NgModule } from '@angular/core';
 //import { BrowserModule } from '@angular/platform-browser';
-
+import {LogicProvider} from '../../providers/logic/logic'
+import * as $ from 'jquery';
 
 @Component({
   selector: 'page-home',
@@ -20,12 +21,13 @@ export class HomePage  {
 
  
 
-  constructor(private iab: InAppBrowser, public navCtrl: NavController,public http: Http
-    ) {
+  constructor(private iab: InAppBrowser, public navCtrl: NavController,public http: Http,
+    public _logic:LogicProvider) {
   }
+
  
   newItem:string; //입력값을 저장할 변수
-  
+ 
   addItem():void{
     let headers=new Headers();
     headers.append("Content-Type",'application/json');
@@ -37,16 +39,12 @@ export class HomePage  {
 
     this.http.post('http://15.164.97.30:3000/api/scraping',JSON.stringify(body),{headers:headers})
     .toPromise().then(res=>{
-      console.log("아이오닉 검색 시"+res.json());
-    })
-    this.http.post('http://15.164.97.30:3002/api/scraping',JSON.stringify(body),{headers:headers})
-    .subscribe((data)=>{
-      console.log("server2:"+data.json());
+      //console.log("아이오닉 검색 시"+res.json()[0]['title']);
+      this._logic.book=res.json();
+        this.navCtrl.push(FirstPage,{msg:this.newItem});
     })
 
-    this.navCtrl.push(FirstPage,{msg:this.newItem});
+
+    
   }
-
-  
-
 }

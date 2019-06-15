@@ -12,22 +12,12 @@
 </ion-header>
 
 <ion-content padding>
+    
 
-    <ion-row>
-        
-            
-            <div class="screen" *ngFor="let q of eachBook$ | async">
-          
-                <img width="100" height="130" src="{{q.img}}">
-          <br>
-                도서명 : {{q.title}}<br>서가번호 :{{ q.bookNumber }} <br><br>
-              </div>
-      
-        </ion-row>
-  
+    <iframe id="linkframe" src="" ></iframe>
     <button ion-button block color="dark" (click)="openCamera()">
         ar service <ion-icon name="camera"></ion-icon>
-      </button> 
+    </button>
 
 
 </ion-content>

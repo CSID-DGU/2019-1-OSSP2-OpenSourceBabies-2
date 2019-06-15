@@ -18,6 +18,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 export class CameraPage implements AfterViewInit{
   floor:string;//층
   constructor(public navCtrl: NavController, public navParams: NavParams,private platform: Platform, private androidPermissions: AndroidPermissions) {
+  /*
     if (this.platform.is('cordova')) {
       this.platform.ready().then(() => {
         this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.CAMERA).then(
@@ -28,6 +29,7 @@ export class CameraPage implements AfterViewInit{
         this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.CAMERA]);
       });
     }
+     */
   }
   ngAfterViewInit() {
     // this.videoContainer.nativeElement.appendChild(this.video);

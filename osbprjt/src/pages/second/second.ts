@@ -31,42 +31,39 @@ export class SecondPage {
 */
 @ViewChild(Slides) slides: Slides;
 
-  eachBook$: Observable<IData[]>;
-  totalBookNo: number;
-  
+  link:string;
+  mysymbol:string;
   constructor(public navCtrl: NavController,public http: Http
     ,public navParams: NavParams,public _logic: LogicProvider) {
-  }
-  
 
-ionViewWillEnter() {
-  this.eachBook$ = this._logic.getData()
-  this.eachBook$.subscribe((res) => {
-    this.totalBookNo = res.length
-  })
-}
+  }
 
 
   //constructor(public navCtrl: NavController, public navParams: NavParams, public http:Http) {}
 
   ionViewDidLoad() {
-    console.log(this.navParams.get('msg'));
-  
+    this.link= this.navParams.get('msg');
+    this.mysymbol=this.navParams.get('symbol');
+    //console.log("symbol"+this.mysymbol);
+    document.querySelector("#linkframe").setAttribute("src",this.link);
   }
   openCamera(): void{
+    
     let headers=new Headers();
     headers.append("Content-Type",'application/json');
 
     let body={
-      number:'001', //청구번호
+      symbol:this.mysymbol, //청구번호
       floor:'3'
     };
 
     this.http.post('http://15.164.97.30:3001/api/osbprjt',JSON.stringify(body),{headers:headers})
-    .subscribe((data)=>{
-      console.log(data);
+    .toPromise().then(res=>{
+      //console.log("아이오닉 검색 시"+res.json()[0]['title']);
+      console.log(res.json());
+      console.log(this._logic.bookwhere['n_fbb_idx']);
+        this.navCtrl.push(CameraPage);
     })
-    this.navCtrl.push(CameraPage);
   }
 
   
