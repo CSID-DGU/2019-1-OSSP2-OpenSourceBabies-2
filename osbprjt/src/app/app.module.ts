@@ -17,7 +17,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirstPage } from '../pages/first/first';
 import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
-import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+//import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { LogicProvider } from '../providers/logic/logic';
 import { SecondPage } from '../pages/second/second';
 import {SeatPage} from '../pages/seat/seat';
@@ -61,7 +61,7 @@ import {SeatPage} from '../pages/seat/seat';
     HttpModule,
     HttpClientModule,
     InAppBrowser,
-    AndroidPermissions,
+    //AndroidPermissions,
     //{provide: ErrorHandler, useClass: IonicErrorHandler},
     LogicProvider
   ],
