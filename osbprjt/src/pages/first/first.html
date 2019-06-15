@@ -11,24 +11,24 @@
   </ion-navbar>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
-
 </ion-header>
 
 <ion-content padding>
  <ion-icon name="search">검색결과</ion-icon><br>
+
   총 검색된 책의 권수는 {{ totalBookNo }}권입니다.<br><br><br>
-  <div class="screen" *ngFor="let q of eachBook$ | async">
+  <div class="screen" *ngFor="let q of eachBook$">
 <ion-row>
   <ion-col col-10>
-      {{q.id}}.
+    
   </ion-col>
   <ion-col col-4>
-    <button (click)="nextPage()">
-      <img   width="100" height="130" src="{{q.img}}" />
+    <button (click)="nextPage(q['link'])">
+      <img width="100" height="130" src="" />
     </button>
   </ion-col>
   <ion-col>
-      도서명 : {{q.title}}<br>서가번호 :{{ q.bookNumber }} <br><br>
+      도서명 : {{q['title']}}<br>서가번호 : <br><br>
   </ion-col>
    
 

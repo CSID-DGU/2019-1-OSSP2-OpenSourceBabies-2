@@ -1,7 +1,15 @@
 export interface IData{
-	id?: number,
-	img?: string
+	rank?: string
 	title?: string
-	bookNumber?: string
 	link?: string
+}
+export interface ItDesData{
+	description?:string
+}
+export interface ItData{
+	imageUrl?: string,
+	item?: any
+}
+export interface book{
+	book:string;
 }

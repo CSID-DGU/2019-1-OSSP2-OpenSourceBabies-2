@@ -4,8 +4,6 @@ import { FirstPage } from './first';
 import { SecondPage } from '../second/second';
 @NgModule({
   declarations: [
-    FirstPage,
-    SecondPage
   ],
   imports: [
     IonicPageModule.forChild(FirstPage),

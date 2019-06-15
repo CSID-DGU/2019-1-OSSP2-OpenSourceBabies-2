@@ -16,7 +16,6 @@ import { CameraPage } from '../pages/camera/camera';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirstPage } from '../pages/first/first';
-import { AframeArPage } from '../assets/aframe-ar/aframe-ar';
 import { LogicProvider } from '../providers/logic/logic';
 import { SecondPage } from '../pages/second/second';
 import {SeatPage} from '../pages/seat/seat';
@@ -30,7 +29,6 @@ import {SeatPage} from '../pages/seat/seat';
     CameraPage,
     FirstPage,
     SecondPage,
-    AframeArPage,
     SeatPage
   ],
   imports: [
@@ -52,7 +50,6 @@ import {SeatPage} from '../pages/seat/seat';
     CameraPage,
     FirstPage,
     SecondPage,
-    AframeArPage,
     SeatPage
   ],
   providers: [
