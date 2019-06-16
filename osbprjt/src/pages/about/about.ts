@@ -24,4 +24,9 @@ export class AboutPage {
       console.log(data2);
     });
   }
+  
+  openUrlA():void
+  {
+    window.open('https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2');
+  }
 }

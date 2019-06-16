@@ -2,11 +2,52 @@
 <ion-header>
   <ion-navbar  color="lightgreen">
       <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
-    <ion-title>camera</ion-title>
+    <ion-title>map page</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
   <iframe src="https://maps.mapwize.io/#/f/p/dgu_lib/stairs/t/p/dgu_lib/line1_bk1?embed=true&&z=0.5"></iframe>
+  <br><br>
 
-
+  \u00A0\u00A0<ion-icon name="book"></ion-icon>\u00A0\u00A0 아래에서 책의 자세한 위치를 확인하세요<br><br>
+  \u00A0\u00A0\u00A0\u00A0 서적이 책꽂이의 {{rowNo}} 번째 행에 존재합니다<br>
+  <ion-grid>
+      <ion-row >
+        <ion-col>
+            \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0
+            \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0
+           
+             <img width="130" height="400"   src="assets/imgs/bookshelve.png"/><br>
+             <img width="130" height="400" src="assets/imgs/bookshelve.png"/>
+        </ion-col>
+        <ion-col >
+            <br><br><br>
+            \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0
+            \u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0<ion-item *ngIf="row1"><img width="50" height="50" src="assets/imgs/arrows.png"/></ion-item><br><br><br><br><br><br>
+            \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0
+            \u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0<ion-item *ngIf="row2"><img width="50" height="50" src="assets/imgs/arrows.png"/></ion-item><br><br><br><br><br><br>
+            \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0
+            \u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0<ion-item *ngIf="row3"><img width="50" height="50"  src="assets/imgs/arrows.png"/></ion-item><br><br><br><br><br><br>
+            \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0
+            \u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0<ion-item *ngIf="row4"><img width="50" height="50"  src="assets/imgs/arrows.png"/></ion-item><br><br><br><br><br><br>
+            \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0
+            \u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0<ion-item *ngIf="row5"><img width="50" height="50"  src="assets/imgs/arrows.png"/></ion-item><br><br><br><br><br><br>
+            \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0
+            \u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0<ion-item *ngIf="row6"><img width="50" height="50"  src="assets/imgs/arrows.png"/></ion-item><br><br><br><br><br><br>
+          
+        </ion-col>
+      </ion-row>
+      
+  </ion-grid>
+ <!--
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col>------------------------------------------<br>
+      책은 전체 책장에서 --번째 열
+      --번째 행에 위치합니다<br>
+      ------------------------------------------
+    </ion-col>
+    
+  </ion-row>
+  -->
 </ion-content>

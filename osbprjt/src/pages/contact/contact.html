@@ -1,20 +1,38 @@
 <ion-header>
-    <ion-navbar color="lightgreen">
-        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
+  <ion-navbar color="lightgreen">
+      <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+  <ion-title>
+    Contact & Book wish lists
+  </ion-title>
+</ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <br>
-      <ion-icon name="book"></ion-icon> 중앙도서관 연락망
-      <br>
+
+    <br>
+   <p></p>\u00A0\u00A0 <ion-icon name="book"></ion-icon> 중앙도서관 연락망
+    <br>
 <br>
-<button ion-button round outline color="green2" (click)="openUrl();" >중앙도서관 연락처</button>
-    </ion-item>
-  </ion-list>
+
+\u00A0\u00A0<button ion-button round outline color="green2" (click)="openUrl();" >중앙도서관 연락처</button>
+ <br><br>
+    \u00A0\u00A0<ion-icon name="book"></ion-icon>  \u00A0\u00A0 BOOK WISH LISTS <br>
+
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>book name</ion-label>
+        <ion-input [(ngModel)]="newItem" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button full round color="green2" (click)="addItem2()">add Item</button>
+    <br>
+
+    <ion-list>
+      <button ion-item *ngFor ="let item of items">
+        {{item}}
+      </button>
+    </ion-list>
+
+
 </ion-content>

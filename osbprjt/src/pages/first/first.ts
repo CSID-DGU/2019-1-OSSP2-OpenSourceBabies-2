@@ -30,8 +30,8 @@ export class FirstPage {
   @ViewChild(Slides) slides: Slides;
 
   eachBook$: Object;
-  eachBook_interpark$: Observable<ItData[]>;
   totalBookNo: number;
+  eachBook_interpark$: Observable<ItData[]>;
   query: string;
   url:string;
   apiKey:string;
@@ -74,6 +74,9 @@ export class FirstPage {
   }*/
 ionViewWillEnter() {
   this.eachBook$ = this._logic.getBookData();
+  this.totalBookNo = Object.keys(this.eachBook$).length;
+  console.log("totalBookNo"+ this.totalBookNo);
+
 }
   //constructor(public navCtrl: NavController, public navParams: NavParams, public http:Http) {}
 

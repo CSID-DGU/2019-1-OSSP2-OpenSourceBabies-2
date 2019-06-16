@@ -15,10 +15,12 @@
 
 <ion-content padding>
  <ion-icon name="search">검색결과</ion-icon><br>
+  총 검색된 책의 권수는 {{totalBookNo}} 권입니다.
 
-  총 검색된 책의 권수는 {{ totalBookNo }}권입니다.<br><br><br>
+
+<br><br><br>
   <div class="screen" *ngFor="let q of eachBook$">
-
+ 
 <ion-row>
   <ion-col col-10>
     
