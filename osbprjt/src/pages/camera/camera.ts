@@ -18,8 +18,8 @@ import { LogicProvider } from '../../providers/logic/logic';
   templateUrl: 'camera.html',
 })
 export class CameraPage implements AfterViewInit{
-  floor:string;//ì¸?
-  rowNo:number=2;
+  floor:string;//ï¿½?
+  rowNo:number;
   row1:boolean=false;
   row2:boolean=false;;
   row3:boolean=false;
@@ -28,8 +28,8 @@ export class CameraPage implements AfterViewInit{
   row6:boolean=false;
 
   
-  constructor(public navCtrl: NavController, public navParams: NavParams,/*private platform: Platform,private androidPermissions: AndroidPermissions*/) {
-
+  //constructor(public navCtrl: NavController, public navParams: NavParams,/*private platform: Platform,private androidPermissions: AndroidPermissions*/) {
+  
   Book:object;
   constructor(public navCtrl: NavController, public navParams: NavParams,public _logic: LogicProvider){
     /*private platform: Platform,private androidPermissions: AndroidPermissions*/
@@ -49,6 +49,7 @@ export class CameraPage implements AfterViewInit{
   ngAfterViewInit() {
     
     this.Book = this._logic.getBWhereData();
+    this.rowNo=this.Book['n_fbbb_idx'];
     //console.log(this.Book);
     var link=`https://maps.mapwize.io/#/f/p/dgu_lib/stairs/t/p/dgu_lib/line1_bk${this.Book['n_fbb_idx']}?embed=true&&z=0.5?apiKey=cd75d824790783e5ba22e75646bff79f`;
     console.log(link);
@@ -64,16 +65,16 @@ export class CameraPage implements AfterViewInit{
     if(this.rowNo==1)
     {
       this.row1=true;
-      //idê°€ 23456??imageë¥?hidden
+      //idê°€ 23456??imageï¿½?hidden
     }
     else if(this.rowNo==2)
     {
-      //idê°€ 23456??imageë¥?hidden
+      //idê°€ 23456??imageï¿½?hidden
       this.row2=true;
     }
     else if(this.rowNo==3)
     {
-      //idê°€ 23456??imageë¥?hidden
+      //idê°€ 23456??imageï¿½?hidden
       this.row3=true;
     }
     else if(this.rowNo==4)

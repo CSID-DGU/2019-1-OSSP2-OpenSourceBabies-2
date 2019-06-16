@@ -10,8 +10,8 @@ import { CameraPage } from '../camera/camera';
 })
 export class TabsPage {
 
-  //tab1Root = HomePage;
-  tab1Root=CameraPage;
+  tab1Root = HomePage;
+  //tab1Root=CameraPage;
   tab2Root = AboutPage;
   tab3Root = ContactPage;
 

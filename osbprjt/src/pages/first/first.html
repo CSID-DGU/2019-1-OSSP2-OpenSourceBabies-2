@@ -7,7 +7,7 @@
 <ion-header>
     <ion-navbar color="lightgreen">
         <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
-    <ion-title><ion-icon name="bookmarks"></ion-icon> DONGGUK UNIV. LIBRARY</ion-title>
+    <ion-title>DGU LIBRARY</ion-title>
   </ion-navbar>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
@@ -27,11 +27,13 @@
   </ion-col>
   <ion-col col-4>
     <button (click)="nextPage(q['link'])">
-      <img width="100" height="130" src="" />
+      <img width="100" height="130" src="{{q['img']}}" />
     </button>
   </ion-col>
   <ion-col>
-      도서명 : {{q['title']}}<br>서가번호 : <br><br>
+      도서명 : {{q['title']}}<br>
+      저자 : {{q['author']}}<br>
+      출판사 : {{q['publisher']}}<br>
   </ion-col>
    
 

@@ -53,14 +53,15 @@ export class SecondPage {
     headers.append("Content-Type",'application/json');
 
     let body={
-      symbol:this.mysymbol, //ì²?µ¬ë²ˆí˜¸
+      symbol:this.mysymbol, //ï¿½?ï¿½ï¿½ë²ˆí˜¸
       floor:'3'
     };
 
     this.http.post('http://15.164.97.30:3001/api/osbprjt',JSON.stringify(body),{headers:headers})
-    .toPromise().then(res=>{      console.log(res.json());
+    .toPromise().then(res=>{      console.log("second page res.json()"+res.json());
       this._logic.bookwhere=res.json();
-      console.log(this._logic.bookwhere['n_fbb_idx']);
+      console.log("this._logic.bookwhere"+ this._logic.bookwhere);
+      console.log("['n_fbb_idx']"+this._logic.bookwhere['n_fbb_idx']);
         this.navCtrl.push(CameraPage);
     })
     
