@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewChild, AfterViewInit } from '@angular/core';
+import { LogicProvider } from '../../providers/logic/logic';
+
 //import { Platform } from '@ionic/angular';
 //import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 /**
@@ -16,7 +18,7 @@ import { ViewChild, AfterViewInit } from '@angular/core';
   templateUrl: 'camera.html',
 })
 export class CameraPage implements AfterViewInit{
-  floor:string;//층
+  floor:string;//�?
   rowNo:number=2;
   row1:boolean=false;
   row2:boolean=false;;
@@ -27,6 +29,10 @@ export class CameraPage implements AfterViewInit{
 
   
   constructor(public navCtrl: NavController, public navParams: NavParams,/*private platform: Platform,private androidPermissions: AndroidPermissions*/) {
+
+  Book:object;
+  constructor(public navCtrl: NavController, public navParams: NavParams,public _logic: LogicProvider){
+    /*private platform: Platform,private androidPermissions: AndroidPermissions*/
   /*
     if (this.platform.is('cordova')) {
       this.platform.ready().then(() => {
@@ -41,7 +47,13 @@ export class CameraPage implements AfterViewInit{
      */
   }
   ngAfterViewInit() {
-    // this.videoContainer.nativeElement.appendChild(this.video);
+    
+    this.Book = this._logic.getBWhereData();
+    //console.log(this.Book);
+    var link=`https://maps.mapwize.io/#/f/p/dgu_lib/stairs/t/p/dgu_lib/line1_bk${this.Book['n_fbb_idx']}?embed=true&&z=0.5?apiKey=cd75d824790783e5ba22e75646bff79f`;
+    console.log(link);
+    document.querySelector("#iframe").setAttribute("src",link);
+    //this.videoContainer.nativeElement.appendChild(this.video);
     // this.initWebRTC();
   }
   ionViewDidLoad() {
@@ -52,16 +64,16 @@ export class CameraPage implements AfterViewInit{
     if(this.rowNo==1)
     {
       this.row1=true;
-      //id가 23456인 image를 hidden
+      //id가 23456??image�?hidden
     }
     else if(this.rowNo==2)
     {
-      //id가 23456인 image를 hidden
+      //id가 23456??image�?hidden
       this.row2=true;
     }
     else if(this.rowNo==3)
     {
-      //id가 23456인 image를 hidden
+      //id가 23456??image�?hidden
       this.row3=true;
     }
     else if(this.rowNo==4)
@@ -85,9 +97,4 @@ export class CameraPage implements AfterViewInit{
     console.log("row6"+this.row6);
   }
  
-  rowArrows:
-  {
-
-  }
-
 }

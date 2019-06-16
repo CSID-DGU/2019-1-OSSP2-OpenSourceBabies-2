@@ -53,15 +53,14 @@ export class SecondPage {
     headers.append("Content-Type",'application/json');
 
     let body={
-      symbol:this.mysymbol, //청구번호
+      symbol:this.mysymbol, //�?��번호
       floor:'3'
     };
 
     this.http.post('http://15.164.97.30:3001/api/osbprjt',JSON.stringify(body),{headers:headers})
-    .toPromise().then(res=>{
-      //console.log("아이오닉 검색 시"+res.json()[0]['title']);
-     // console.log(res.json());
-     // console.log(this._logic.bookwhere['n_fbb_idx']);
+    .toPromise().then(res=>{      console.log(res.json());
+      this._logic.bookwhere=res.json();
+      console.log(this._logic.bookwhere['n_fbb_idx']);
         this.navCtrl.push(CameraPage);
     })
     
