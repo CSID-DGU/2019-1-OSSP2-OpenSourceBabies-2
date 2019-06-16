@@ -61,6 +61,7 @@ export class SecondPage {
     .toPromise().then(res=>{
       //console.log("아이오닉 검색 시"+res.json()[0]['title']);
       console.log(res.json());
+      this._logic.bookwhere=res.json();
       console.log(this._logic.bookwhere['n_fbb_idx']);
         this.navCtrl.push(CameraPage);
     })
