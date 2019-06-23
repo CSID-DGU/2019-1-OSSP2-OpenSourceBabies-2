@@ -53,23 +53,23 @@ node server.js
 ### 실행 화면
 ---------------------------------------------
 
-<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/1.png" width="90%"></img>
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/1.png" width="40%"></img>
 
-<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/2.png" width="90%"></img>
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/2.png" width="40%"></img>
 
-<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/3.png" width="90%"></img>
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/3.png" width="40%"></img>
 
-<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/4.png" width="90%"></img>
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/4.png" width="40%"></img>
 
-<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/5.png" width="90%"></img>
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/5.png" width="40%"></img>
 
-<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/6.png" width="90%"></img>
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/6.png" width="40%"></img>
 
-<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/7.png" width="90%"></img>
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/7.png" width="40%"></img>
 
-<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/8.png" width="90%"></img>
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/8.png" width="40%"></img>
 
-<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/9.png" width="90%"></img>
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/9.png" width="40%"></img>
 
 
 
