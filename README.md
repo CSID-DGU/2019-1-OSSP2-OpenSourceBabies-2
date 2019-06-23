@@ -25,7 +25,7 @@
 -----------------------------------------------
 도서 검색
 
-@[](https://www.youtube.com/watch?v=6C-BKN7NcAk)
+https://www.youtube.com/watch?v=6C-BKN7NcAk
 
 
 도서 안내
