@@ -30,7 +30,7 @@
 git pull
 cd 프로젝트명
 ionic serve
-<pre>
+</pre>
 
 
 # Docker-jenkins-Continuous Deployment
