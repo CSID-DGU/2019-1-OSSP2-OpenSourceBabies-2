@@ -25,10 +25,15 @@
 -----------------------------------------------
 도서 검색
 
+
+<div>
 <iframe width="640" height="360" src="https://www.youtube.com/watch?v=6C-BKN7NcAk" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+</div>
+
 
 도서 안내
 
 <iframe width="640" height="360" src="https://www.youtube.com/watch?v=_wr3VPQGWNQ" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+
 <iframe width="640" height="360" src="https://www.youtube.com/watch?v=APeF-9oMVrY" frameborder="0" gesture="media" allowfullscreen=""></iframe>
 <iframe width="640" height="360" src="https://www.youtube.com/watch?v=b7j_m4lMBo0" frameborder="0" gesture="media" allowfullscreen=""></iframe>
