@@ -23,6 +23,15 @@
 데이터베이스 | mariadb, phpMyAdmin
 서버 | Amazon aws, nodeJS, Docker, Git
 
+# 과정 
+
+### 개발 과정
+<pre>
+git pull
+cd 프로젝트명
+ionic serve
+<pre>
+
 
 # Docker-jenkins-Continuous Deployment
 
@@ -59,7 +68,6 @@ osbprjtDB
 # if process is terminated, Enter command this
 node server.js
 </pre>
-
 
 
 ### 실행 화면
