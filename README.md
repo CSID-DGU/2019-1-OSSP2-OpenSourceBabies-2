@@ -54,6 +54,8 @@ node server.js
 ---------------------------------------------
 home/about/whishlist 탭
 
+결과화면 | 설명 
+----------------------------------------------------------- |  ----------------------------------------------------------- 
 <img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/1.png" width="40%"></img> | 1. home 탭의 화면입니다. 도서 검색을 진행할 수 있는 페이지입니다.
 <img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/2.PNGg" width="40%"></img> | 2. About 탭입니다. 본 어플리케이션의 소개가 들어있습니다. 개발의 과정을 보여주는 git hub링크로 연결 가능합니다.
 <img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/3.png" width="40%"></img> | 3. Wishlist 탭에서 책의 위시리스트를 저장할 수 있습니다. 저장된 책의 리스트를 이용해 도서 검색을 진행할 수 있습니다. 
