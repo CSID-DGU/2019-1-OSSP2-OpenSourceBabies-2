@@ -3,7 +3,7 @@
 
 
 ### 프로젝트명 : 동국대학교 중앙도서관 도서경로안내 서비스
-                >
+                
 
 팀원 | 학번 | 역할 
 ------ | ------------- | ------------- 
@@ -34,6 +34,44 @@
 >>> 19.05.07
 >>> 1) iframe으로 동국대학교 홈페이지 띄움
 >>> 2) camera 버튼 생성하여 기존의 ar 카메라 연결
+
+
+# Docker-jenkins-Continuous Deployment
+
+### Installation
+<pre>
+cd /home/ubuntu/
+git clone https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2.git
+ln -s 2019-1-OSSP2-OpenSourceBabies-2 osbPATH
+cd osbPATH
+</pre>
+
+### Run
+<pre>
+# Login For Private Docker Repository
+docker login
+docker pull uiui97/osbprjt
+ionic4 build
+</pre>
+
+
+# RDS MariaDB-phpmyadmin
+
+### Run
+<pre>
+# if server is terminated, Enter command 'osbprjtDB'
+osbprjtDB 
+</pre>
+
+
+# node API server
+
+### Run
+<pre>
+# if process is terminated, Enter command this
+node server.js
+</pre>
+
 
 
 ### 실행 화면
