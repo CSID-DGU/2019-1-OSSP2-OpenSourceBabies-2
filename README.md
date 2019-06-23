@@ -12,30 +12,6 @@
 정의정 | 2017112137 | 크롤링/서버/DB/도서안내
 권보근 | 2017112149 | 크롤링
 
-
-> by 의정
-> DevOps 가 가능하도록 서버를 구축하고자 Docker, jenkins, Git, slack 이용.
->> 19.04.15
->> 1) AWS EC2 인스턴스 생성 후
->> 2) 외부에서 서버접속을 용이하게 하기 위해 Jupyter notebook 설치
->> 3) 보안위해 HTTPS 적용
->> 4) 시스템서비스 설정(서버에서 jupyter notebook 항상 구동, jupyter notebook 에 권한 넘김)
->> 5) EC2에 Docker 설치
->> DevOps 가 가능하도록 서버를 구축하고자 Docker, jenkins, Git, slack 이용.
->>> 19.04.15
->>> 1) AWS EC2 인스턴스 생성 후
->>> 2) 외부에서 서버접속을 용이하게 하기 위해 Jupyter notebook 설치
->>> 3) 보안위해 HTTPS 적용
->>> 4) 시스템서비스 설정(서버에서 jupyter notebook 항상 구동, jupyter notebook 에 권한 넘김)
->>> 5) EC2에 Docker 설치
-+ ### UI
-> by 예진
-+ ### UI 기능
->>> 19.05.07
->>> 1) iframe으로 동국대학교 홈페이지 띄움
->>> 2) camera 버튼 생성하여 기존의 ar 카메라 연결
-
-
 # Docker-jenkins-Continuous Deployment
 
 ### Installation
@@ -77,6 +53,25 @@ node server.js
 ### 실행 화면
 ---------------------------------------------
 
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/1.png" width="90%"></img>
+
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/2.png" width="90%"></img>
+
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/3.png" width="90%"></img>
+
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/4.png" width="90%"></img>
+
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/5.png" width="90%"></img>
+
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/6.png" width="90%"></img>
+
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/7.png" width="90%"></img>
+
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/8.png" width="90%"></img>
+
+<img src="https://github.com/CSID-DGU/2019-1-OSSP2-OpenSourceBabies-2/blob/master/9.png" width="90%"></img>
+
+
 
 
 
@@ -97,3 +92,31 @@ node server.js
 
 <a href="https://www.youtube.com/watch?v=b7j_m4lMBo0" target="_blank"><img src="https://www.youtube.com/watch?v=b7j_m4lMBo0/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
+
+
+
+
+
+
+
+> by 의정
+> DevOps 가 가능하도록 서버를 구축하고자 Docker, jenkins, Git, slack 이용.
+>> 19.04.15
+>> 1) AWS EC2 인스턴스 생성 후
+>> 2) 외부에서 서버접속을 용이하게 하기 위해 Jupyter notebook 설치
+>> 3) 보안위해 HTTPS 적용
+>> 4) 시스템서비스 설정(서버에서 jupyter notebook 항상 구동, jupyter notebook 에 권한 넘김)
+>> 5) EC2에 Docker 설치
+>> DevOps 가 가능하도록 서버를 구축하고자 Docker, jenkins, Git, slack 이용.
+>>> 19.04.15
+>>> 1) AWS EC2 인스턴스 생성 후
+>>> 2) 외부에서 서버접속을 용이하게 하기 위해 Jupyter notebook 설치
+>>> 3) 보안위해 HTTPS 적용
+>>> 4) 시스템서비스 설정(서버에서 jupyter notebook 항상 구동, jupyter notebook 에 권한 넘김)
+>>> 5) EC2에 Docker 설치
++ ### UI
+> by 예진
++ ### UI 기능
+>>> 19.05.07
+>>> 1) iframe으로 동국대학교 홈페이지 띄움
+>>> 2) camera 버튼 생성하여 기존의 ar 카메라 연결
