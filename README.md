@@ -24,11 +24,7 @@
 ### 실제 사용 과정
 -----------------------------------------------
 도서 검색
-
-
-<div>
-<iframe width="640" height="360" src="https://www.youtube.com/watch?v=6C-BKN7NcAk" frameborder="0" gesture="media" allowfullscreen=""></iframe>
-</div>
+@[](https://www.youtube.com/watch?v=6C-BKN7NcAk)
 
 
 도서 안내
