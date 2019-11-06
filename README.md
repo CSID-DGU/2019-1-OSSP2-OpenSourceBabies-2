@@ -97,19 +97,16 @@ home/about/whishlist 탭
 
 
 
-
-
 ### 실제 사용 과정
 -----------------------------------------------
-도서 검색
+도서 검색<p></p>
+[![도서검색 영상](https://img.youtube.com/vi/6C-BKN7NcAk/0.jpg)](https://www.youtube.com/6C-BKN7NcAk?t=0s)
 
-<a href="https://www.youtube.com/watch?v=6C-BKN7NcAk" target="_blank"><img src="https://www.youtube.com/watch?v=6C-BKN7NcAk/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+도서 안내1<p></p>
+[![도서안내 영상1](https://img.youtube.com/vi/_wr3VPQGWNQ/0.jpg)](https://www.youtube.com/_wr3VPQGWNQ?t=0s)
 
+도서 안내2<p></p>
+[![도서안내 영상2](https://img.youtube.com/vi/APeF-9oMVrY/0.jpg)](https://www.youtube.com/APeF-9oMVrY?t=0s)
 
-도서 안내
-
-<a href="https://www.youtube.com/watch?v=_wr3VPQGWNQ" target="_blank"><img src="https://www.youtube.com/watch?v=_wr3VPQGWNQ/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-
-<a href="https://www.youtube.com/watch?v=APeF-9oMVrY" target="_blank"><img src="https://www.youtube.com/watch?v=APeF-9oMVrY/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-
-<a href="https://www.youtube.com/watch?v=b7j_m4lMBo0" target="_blank"><img src="https://www.youtube.com/watch?v=b7j_m4lMBo0/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+도서 안내3<p></p>
+[![도서안내 영상3](https://img.youtube.com/vi/b7j_m4lMBo0/0.jpg)](https://www.youtube.com/b7j_m4lMBo0?t=0s)
